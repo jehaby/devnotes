@@ -1,0 +1,40 @@
+* Book
+
+** HTTP cache
+
+*** Gateaway cache (reverse proxy) 
+
+Separated from an aplication. There's something in Symfony for this, or can be some other tool.
+
+There are also Varnish and Squid
+
+*** Types of caches
+- browser caches
+- proxy cache 
+- gateway cache
+
+
+*** Symfony Reverse cache 
+
+wrap AppKernel in AppCache in web/app.php
+
+*** Public vs private cache 
+
+http://stackoverflow.com/questions/3492319/private-vs-public-in-cache-control
+
+
+*** Good links on caches
+https://www.mnot.net/cache_docs/
+http://2ndscale.com/rtomayko/2008/things-caches-do
+
+
+* Components
+
+** HTTP Kernel Component
+
+
+** Validation Component
+
+* Environents
+
+

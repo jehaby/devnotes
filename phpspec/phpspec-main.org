@@ -1,0 +1,13 @@
+* phpspec
+
+
+** Prophet objects
+
+*** Stubs
+Fake version of an object. 
+    
+*** Mocks
+
+
+*** Spies
+

@@ -1,0 +1,5 @@
+* Network troubleshooting
+
+/etc/resolvconf/resolv.conf.d/
+
+/etc/resolv.conf

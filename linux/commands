@@ -1,0 +1,7 @@
+pwd - display current directory
+
+file - info about files
+
+apropos - поиск в именах справочных страниц и кратких описаниях
+
+tail -f - watch text file chaging in real time

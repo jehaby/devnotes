@@ -1,0 +1,9 @@
+* Convert vector to raster graphics
+
+convert -density 300 *.eps -resize 500 *.png
+
+
+
+* Conert all images in folder saving name
+
+

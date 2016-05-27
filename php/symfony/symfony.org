@@ -1,0 +1,35 @@
+* Symfony
+** Service Container
+
+[[https://symfony.com/doc/2.8/book/service_container.html][Service Container (Symfony Book)]]
+
+All services are shared by default. 
+[[https://symfony.com/doc/2.8/cookbook/service_container/shared.html][How to define non shared services]]
+
+
+*** Service -- object used globally in application. 
+    
+
+*** Service parameters
+Escaping @ with @@ (only for YAML).
+Escaping % with %% (everywhere).
+
+
+*** Importing configuration from other bundle
+**** Importing with imports
+
+**** Importing with service container extension
+
+
+
+*** Referencing (injecting) services
+
+
+
+** Bundles
+Must be enabled in ~AppKernel~ class
+
+
+** Security Bundle
+[[https://symfony.com/doc/2.8/book/security.html][Security (Book)]]
+[[https://symfony.com/doc/2.8/reference/configuration/security.html][SecurityBundle Configuration]]

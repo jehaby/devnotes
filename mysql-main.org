@@ -1,0 +1,39 @@
+* Mysql
+
+** To load database from file 
+mysql -u username -p database_name < file.sql
+
+
+** To dump sql database: 
+mysqldump -d -h db_host -u username -pyourpass dbname tablename > dumpfile.sql
+-d stands for only structure
+
+*** ignore (skip) some tables:
+use --ignore-table option
+
+*** dump only some tables: 
+mysqldump -d -h db_host -u username -pyourpass dbname *tablename* > dumpfile.sql
+
+** Show size of database: 
+SELECT table_schema                                        "DB Name", 
+   Round(Sum(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" 
+FROM   information_schema.tables 
+GROUP  BY table_schema; 
+
+*** same in one line 
+SELECT table_schema "DB Name", Round(Sum(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" FROM   information_schema.tables GROUP  BY table_schema; 
+
+
+** Show size of each table in database: 
+SELECT table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB` FROM information_schema.TABLES WHERE table_schema = "$DB_NAME" AND table_name = "$TABLE_NAME";
+
+
+
+
+SELECT table_name AS "Table",round(((data_length + index_length) / 1024 / 1024), 2) as TEST FROM information_schema.TABLES WHERE table_schema = "YOUR_DATABASE_NAME" ORDER BY TEST; 
+
+
+** Temporarily disable foreign key check 
+http://stackoverflow.com/questions/15501673/how-to-temporarily-disable-a-foreign-key-constraint-in-mysql
+SET FOREIGN_KEY_CHECKS=0;
+SET FOREIGN_KEY_CHECKS=1;

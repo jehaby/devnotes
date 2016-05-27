@@ -1,0 +1,1 @@
+I created symbolic link beetween ~/.gtk-bookmarks and ~/.config/gtk-3.0/bookmarks

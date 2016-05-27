@@ -1,0 +1,20 @@
+** ubuntu emacsclient				 :emacs:ubuntu:linux:desktop:
+
+http://liuyuanzhi.blogspot.ru/2009/08/open-with-emacs-in-nautilus.html
+
+edit /usr/share/appliations/emacs24.desktop
+
+set 
+Exec=emacsclient -n -a emacs %F
+
+
+
+
+* AWK									:awk:
+
+** Print n-th column
+awk '{print $n}'
+
+** Skip n lines 
+awk 'NR>n {print $n}'
+

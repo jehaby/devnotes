@@ -1,0 +1,8 @@
+* Behat
+
+** generate snippets
+vendor/bin/behat --dry-run --append-snippets
+
+
+
+** how to choose custom database (migrate & seed on every test)

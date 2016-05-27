@@ -1,0 +1,53 @@
+https://www.digitalocean.com/community/tutorials/understanding-the-nginx-configuration-file-structure-and-configuration-contexts
+
+https://www.digitalocean.com/community/tutorials/understanding-nginx-server-and-location-block-selection-algorithms
+
+http://stackoverflow.com/questions/9824328/why-is-nginx-responding-to-any-domain-name
+
+* Directives 
+
+** user
+
+** worker_processes
+
+** listen
+
+typically ip adress and port
+
+** server_name
+
+** location
+
+Can be defined using using *prefix string* or *regular expression* (preceding `~*` (ci) or `~` (cs)).
+To find location matching a request, first checks all locations defined as prefix string, and chooses longest of them. Then 
+
+
+* Contexts
+
+Default: main
+
+main > events | (http > server > location)
+
+** main
+
+** events
+
+** http
+
+** server
+
+
+** geo 
+interesting context something based on request ip adress
+
+
+
+
+
+* Some notes
+
+** Array directive -- any directive that can be used more than once in a single context. 
+Example -- fastcgi_param
+If used in child context, it will overwrite all values from parent contexts.
+Use include.
+

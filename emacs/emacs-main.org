@@ -1,0 +1,34 @@
+* Searching for files
+
+** find-name-dired
+
+
+
+* Help
+Emacs has apropos! `M-x apropos`
+
+
+* My emacs organization
+  ~/Dropbox/configs/emacs/common/main.el
+  
+
+* Bookmarks 
+
+‘C-x r m’ – set a bookmark at the current location (e.g. in a file)
+‘C-x r b’ – jump to a bookmark
+‘C-x r l’ – list your bookmarks
+‘M-x bookmark-delete’ – delete a bookmark by name
+Your personal bookmark file is defined by option ‘bookmark-default-file’, which defaults to `~/.emacs.d/bookmarks`
+
+http://www.emacswiki.org/emacs/BookMarks
+
+
+* Rectangles (vertical selection) 
+http://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.html
+
+C-x SPC
+
+* Auto fill mode
+auto-fill-mode -- that's what I searched for so long
+C-x f -- set-fill-column
+M-q -- fill paragraph

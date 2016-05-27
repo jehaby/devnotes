@@ -1,0 +1,14 @@
+* Redis
+
+
+keys *
+
+dump "key_id"
+
+** Show all data 
+
+[[http://stackoverflow.com/questions/5252099/redis-command-to-get-all-available-keys][first google link]]
+[[http://lzone.de/cheat-sheet/Redis][Good Cheat Sheet]]
+SCAN and KEYS commands
+
+

@@ -1,0 +1,2 @@
+use DB::listen(function($sql) { var_dump($sql); }); to watch db connection
+(from array on steroids lesson);

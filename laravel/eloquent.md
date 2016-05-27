@@ -1,0 +1,2 @@
+Collection to array  `all()`
+

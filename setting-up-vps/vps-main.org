@@ -1,0 +1,13 @@
+* nginx
+
+[[http://nginx.org/ru/linux_packages.html][nginx.com]]
+
+    sudo apt-key add nginx_signing.key
+
+* ssh
+
+
+
+* rights for var/www
+
+[[http://serverfault.com/questions/6895/whats-the-best-way-of-handling-permissions-for-apache2s-user-www-data-in-var?newreg%3De65ca619b08d4ee0817c078e45fcf0c5][serverfault]]    

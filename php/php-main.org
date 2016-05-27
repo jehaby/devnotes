@@ -1,0 +1,23 @@
+* PHP
+
+** Serialization 
+
+It could be json_encode (most multiplatform), serialize (internal PHP format, allows restore objects with types), or session serialization format (fucking shit).
+[[https://dzone.com/articles/polyglot-persistence-in-nosql-space][Serialize data like PHP session]].
+
+
+session_encode: hw|i:33;
+serialize: a:1:{s:2:"hw";i:33;}
+
+
+** Lifecycle callbacks
+
+
+** Exceptions
+
+Just some thought on handling exceptions
+
+
+You should catch an exception most closer to code which throws it 
+
+Isn't it more convenient to catch it in one place? 

@@ -1,0 +1,164 @@
+#+FILETAGS: :docker
+
+systemctl start docker
+
+docker info
+
+* Commands
+docker run
+docker images
+docker ps
+docker stop
+docker rm 
+
+
+docker-composer up -d
+
+* Dockerfile
+
+** ENTRYPOINT vs CMD
+
+* Skipped shit
+https://docs.docker.com/engine/installation/linux/ubuntulinux/
+Configure a DNS server for use by Docker
+Systems that run Ubuntu or an Ubuntu derivative on the desktop typically use 127.0.0.1 as the default nameserver in /etc/resolv.conf file. The NetworkManager also sets up dnsmasq to use the real DNS servers of the connection and sets up nameserver 127.0.0.1 in /etc/resolv.conf.
+
+When starting containers on desktop machines with these configurations, Docker users see this warning:
+
+WARNING: Local (127.0.0.1) DNS resolver found in resolv.conf and containers
+can't use it. Using default external servers : [8.8.8.8 8.8.4.4]
+The warning occurs because Docker containers can’t use the local DNS nameserver. Instead, Docker defaults to using an external nameserver.
+
+To avoid this warning, you can specify a DNS server for use by Docker containers. Or, you can disable dnsmasq in NetworkManager. Though, disabling dnsmasq might make DNS resolution slower on some networks.
+
+The instructions below describe how to configure the Docker daemon running on Ubuntu 14.10 or below. Ubuntu 15.04 and above use systemd as the boot and service manager. Refer to control and configure Docker with systemd to configure a daemon controlled by systemd.
+
+To specify a DNS server for use by Docker:
+
+Log into Ubuntu as a user with sudo privileges.
+
+Open the /etc/default/docker file for editing.
+
+$ sudo nano /etc/default/docker
+Add a setting for Docker.
+
+DOCKER_OPTS="--dns 8.8.8.8"
+Replace 8.8.8.8 with a local DNS server such as 192.168.1.1. You can also specify multiple DNS servers. Separated them with spaces, for example:
+
+--dns 8.8.8.8 --dns 192.168.1.1
+Warning: If you’re doing this on a laptop which connects to various networks, make sure to choose a public DNS server.
+
+Save and close the file.
+
+Restart the Docker daemon.
+
+$ sudo restart docker
+   
+
+Or, as an alternative to the previous procedure, disable dnsmasq in NetworkManager (this might slow your network).
+
+Open the /etc/NetworkManager/NetworkManager.conf file for editing.
+
+$ sudo nano /etc/NetworkManager/NetworkManager.conf
+Comment out the dns=dnsmasq line:
+
+dns=dnsmasq
+Save and close the file.
+
+Restart both the NetworkManager and Docker.
+
+$ sudo restart network-manager
+$ sudo restart docker
+Configure Docker to start on boot
+Ubuntu uses systemd as its boot and service manager 15.04 onwards and upstart for versions 14.10 and below.
+
+For 15.04 and up, to configure the docker daemon to start on boot, run
+
+$ sudo systemctl enable docker
+For 14.10 and below the above installation method automatically configures upstart to start the docker daemon on boot
+
+
+* Links 
+
+http://developerblog.redhat.com/2016/02/24/10-things-to-avoid-in-docker-containers/
+
+https://news.ycombinator.com/item?id=10782897
+
+
+
+* Tutorial
+
+** Install docker
+
+** Install docker-composer
+curl -L https://github.com/docker/compose/releases/download/1.7.0-rc1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+
+
+
+
+* today I learned
+
+difference between -p and EXPOSED
+
+many basic commands
+
+docker-compose
+
+* Connect via ssh
+
+rom docker 1.3 onwards.
+#+BEGIN_SRC sh 
+  docker exec -it <containerIdOrName> bash 
+#+END_SRC
+
+Basically if the docker container was started using /bin/bash command you can access it using attach, if not then you need to execute the command to create a bash instance inside the container using exec
+Also to exit bash without leaving bash running in a rogue process
+exit
+
+* .dockerignore
+
+* Volumes
+  
+* Useful things
+
+** Start mysql containter					      :mysql:
+docker run --name joomla-mysql -e MYSQL_ROOT_PASSWORD=123 --expose=3306 -d mysql:5.5
+
+
+* Data persistence 
+
+[[http://stackoverflow.com/questions/18496940/how-to-deal-with-persistent-storage-e-g-databases-in-docker/20652410#20652410][Top-stackoverflow]]
+
+
+ data only container pattern must be abandoned in favour of the new volumes.
+
+[[https://github.com/docker/docker/pull/20262][Some interesting staff about volume options]]
+
+
+
+* Tags
+Tags are just human-readable aliases for the full image name (d583c3ac45fd...).
+
+* Options for add data to container through docker-compose
+
+volumes
+
+
+
+
+
+
+* Docker-compose
+
+** Multiple compose files 
+
+docker-compose.yml 
+docker-compose.override.yml -- will be read by docker-compose by default
+
+docker-compose -f file1.yml file2.yml
+
+file1.yml -- base file. All paths must be relative to it.
+
+

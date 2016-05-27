@@ -1,0 +1,27 @@
+insert tag:  C-c C-c   (only on heading)
+
+search tag: C-c \ 
+
+
+Archive: 
+http://superuser.com/questions/354209/how-do-i-sort-or-move-done-items-in-org-mode
+
+C-c C-x C-a
+
+
+
+* Easy templates
+Print 
+http://orgmode.org/manual/Easy-Templates.html
+
+
+
+
+
+* Text formatting
+*bold*
+ /italic/
+ _underlined_
+ =verbatim=
+ ~code~
++strike-through+
