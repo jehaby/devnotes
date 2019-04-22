@@ -1,0 +1,47 @@
+* Prometheus
+** Data model 
+
+Time series: 
+<identifier> (timestamp int64, value float64)
+
+Label-based dimensional data model.
+
+Как строить графики: набросать в prometheus.io, потому уже в Графану.
+** Как прометей хранит метрики 
+*** Каждая метрика -- отдельный файл на диске
+В файл пишем чанками по 1КБ (чтобы не писать дофига)
+
+* Metric types
+** Counter
+** Gauge
+** Histogram
+** Summary
+
+** What to choose 
+https://prometheus.io/docs/practices/instrumentation/
+It is important to know which of the four main metric types to use for a given metric.
+
+To pick between counter and gauge, there is a simple rule of thumb: if the value can go down, it is a gauge.
+
+Counters can only go up (and reset, such as when a process restarts). They are useful for accumulating the number of events, or the amount of something at each event. For example, the total number of HTTP requests, or the total number of bytes sent in HTTP requests. Raw counters are rarely useful. Use the rate() function to get the per-second rate at which they are increasing.
+
+Gauges can be set, go up, and go down. They are useful for snapshots of state, such as in-progress requests, free/total memory, or temperature. You should never take a rate() of a gauge.
+* Как правильно инструментировать?
+
+
+* Expression language
+** Expression can evaluate to 
+*** Instant vector
+*** Range vector
+*** Scalar (single value)
+*** String (unused)
+
+** internal __name__ label
+
+{__name__="xiaomi_api_response_time_count", method="GET",path="/content/titleidlist",status="OK",xiaomi_status="0"}
+
+xiaomi_api_response_time_count{method="GET",path="/content/titleidlist",status="OK",xiaomi_status="0"}
+
+* Links
+Prometheus как time series database / Тимур Нурутдинов (Lamoda)
+https://www.youtube.com/watch?v=5g6NAKzTKTs
