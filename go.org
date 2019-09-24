@@ -1,0 +1,47 @@
+* Go
+  
+** Some links
+   [[https://github.com/a8m/go-lang-cheat-sheet][cheat-sheet]]
+   https://golang.org/doc/effective_go.html
+   http://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go
+   
+** How to set up environment
+   [[https://golang.org/doc/code.html][How to write Go code]]
+   export GOPATH=$HOME/work
+   export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin/
+   
+
+
+Has lamda function, 
+
+Variable arguments
+
+First arguments, then return values
+
+Lexically (normally) scoped 
+
+
+Types, structs and other shit 
+   
+   
+
+
+** Maps
+https://blog.golang.org/go-maps-in-action
+
+You can use structs as keys (also int, strings, pointers ... )
+
+
+
+
+** Go concurrency patterns [[https://www.youtube.com/watch?v%3Df6kdp27TYZs&list%3DPLP2uClub0uTrfY7bIpP985bkU6L9wqhVD&index%3D1][video]]
+
+
+** Generator 
+Function which generates a channel
+
+** Multiplexer
+Takes several channels, returns one
+** Tests
+*** go test ./... runs in parallel
+If it's not what you want (in this case your tests are probably suck) then use `-p` flag.

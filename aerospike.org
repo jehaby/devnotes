@@ -1,0 +1,17 @@
+* Aerospike 
+
+** Main concepts
+
+bin -- aka column in SQL
+record -- like record or string in SQL
+set -- wtf
+
+
+http://www.aerospike.com/docs/architecture/data-model.html
+
+
+
+** Start aerospike manager console on Mac 
+sudo /Library/amc/amc
+
+

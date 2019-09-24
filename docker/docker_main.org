@@ -2,6 +2,7 @@
 
 systemctl start docker
 
+
 docker info
 
 * Commands
@@ -162,3 +163,17 @@ docker-compose -f file1.yml file2.yml
 file1.yml -- base file. All paths must be relative to it.
 
 
+
+* Docker hub
+
+* show container IPs 
+# show all running container's names and ips
+docker ps -q | xargs -n 1 docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{ .Name }}' | sed 's/ \// /'
+
+* Images
+** Remove untagged
+
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+
+* Space usage
+docker system df

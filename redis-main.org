@@ -12,3 +12,19 @@ dump "key_id"
 SCAN and KEYS commands
 
 
+
+
+
+SCAN cursor MATH pattern COUNT
+
+
+SCAN vs KEYS
+
+
+
+** show databases 
+INFO KEYSPACE
+
+
+
+SELECT

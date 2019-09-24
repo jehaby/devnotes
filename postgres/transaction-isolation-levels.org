@@ -1,0 +1,24 @@
+* Levels
+** Read uncommitted
+Same as "Read committed in PG".
+** Read committed
+Default level.
+
+** Repeatable read 
+** Serializable
+
+* Phenomenas
+** Dirty read
+A transaction reads data written by some ohter uncommitted transaction.
+** Nonrepeatable read
+A transactions re-reads data it has previously read and finds it has
+been modified by another transaction, that's commited since the
+initial read.
+** Phantom read
+
+
+
+* Questions
+** How to set in Postgres
+** How to use in Go
+

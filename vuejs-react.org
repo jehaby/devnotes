@@ -1,0 +1,11 @@
+* vuex vs redux
+
+https://medium.com/front-end-hacking/persisting-user-authentication-with-vuex-in-vue-b1514d5d3278
+
+Commits — In Vuex commits are the equivalents of actions in Redux. The
+only way to change state in a Vuex store is by committing a
+mutation. Mutation handler functions must be synchronous.
+
+In Vuex mutations are the equivalents of reducers in Redux. The key
+difference is that you don’t have to use immutability to improve your
+performance.

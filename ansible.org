@@ -1,0 +1,20 @@
+* Ansible
+** Fact
+system and environment information ansible gathers ("context") before running Tasks
+** Module
+What runs tasks
+** Task
+are idempotent
+** Handler
+A Handler is exactly the same as a Task (it can do anything a Task can), but it will run when called by another Task. You can think of it as part of an Event system; A Handler will take an action when called by an event it listens for.
+** Role
+** Playbook
+
+Run a playbook
+
+    ansible-playbook [-i inventory.yml] playbook.yml
+
+** Best practices
+https://www.ansible.com/blog/ansible-best-practices-essentials
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#directory-layout
+

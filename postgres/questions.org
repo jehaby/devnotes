@@ -1,0 +1,24 @@
+* questions
+
+** why seq scan in #1 and index scan in #2
+
+bmp=> explain analyze select * from packages where id < 'p';
+                                                     QUERY PLAN                                                     
+--------------------------------------------------------------------------------------------------------------------
+ Seq Scan on packages  (cost=0.00..7873.03 rows=193106 width=1321) (actual time=0.010..200.916 rows=169546 loops=1)
+   Filter: ((id)::text < 'p'::text)
+   Rows Removed by Filter: 15575
+ Planning time: 0.185 ms
+ Execution time: 205.569 ms
+(5 rows)
+
+bmp=> explain analyze select * from packages where id > 'p';
+                                                              QUERY PLAN                                                               
+---------------------------------------------------------------------------------------------------------------------------------------
+ Index Scan using packages_pkey on packages  (cost=0.42..1923.69 rows=17408 width=1321) (actual time=0.052..33.881 rows=15575 loops=1)
+   Index Cond: ((id)::text > 'p'::text)
+ Planning time: 0.178 ms
+ Execution time: 34.334 ms
+(4 rows)
+
+bmp=> 

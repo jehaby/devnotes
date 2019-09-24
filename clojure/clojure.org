@@ -1,0 +1,5 @@
+* Anonymous functions 
+** Alternative syntax 
+    ~#(+ 3 %)~
+
+% for single argument; %1, %2, etc for more then one argument

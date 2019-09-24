@@ -1,0 +1,22 @@
+* Column oriented DBs (CODBs)
+
+** Row oriented DBs (usual DBs)
+Locality of reference: data of one row stored near.
+
+Getting data from one column is faster in CODBs, but getting data from
+one rows is usually slower.
+
+** Implementations
+
+OSS: ClickHouse, Apache HBase, some Postgres extension, some MariaDB extension.
+
+PaaS: Amazon, Microsoft, Google and Oracle has some shit.
+
+Proprietary: Vertica, many others
+
+
+https://en.wikipedia.org/wiki/Column-oriented_DBMS
+https://en.wikipedia.org/wiki/List_of_column-oriented_DBMSes
+
+
+

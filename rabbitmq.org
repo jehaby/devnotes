@@ -1,0 +1,40 @@
+* rabbitmq
+
+https://www.rabbitmq.com/tutorials/amqp-concepts.html
+
+** producer
+ is a user application that sends messages.
+** queue
+ is a buffer that stores messages.
+** consumer
+ is a user application that receives messages.
+
+** exchange
+4 types: direct, topic, headers and fanout
+
+Durable exhange -- survives broker restart 
+
+durable queues and messages 
+
+If you need a stronger guarantee then you can use publisher confirms.
+
+*** Direct exchange
+Ideal for one consumer (but can be used for many).
+
+Message recieved by only one consumer.
+
+Can be used for simple round-robin load balancing.
+
+*** Fanout exhange
+
+Message routed to all consumer. 
+
+Routing key is ignored. 
+
+
+*** Topic exchange
+
+Message routed to one or many queues based on matching between a message routing key and the pattern that was used to bind a quque to an exchange.
+
+*** Headers exchange
+

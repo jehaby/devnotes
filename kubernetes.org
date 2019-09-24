@@ -1,0 +1,33 @@
+* Kubernetes
+
+** Basic objects
+
+*** Pod
+Can have one or more containers
+*** Service
+Consists of pods (?)
+*** Volume
+*** Namespace
+
+*** ReplicaController
+ReplicaSet is better
+*** ReplicaSet
+Mostly used by Deployment (but can be used independently)
+*** Deployment
+
+
+*** Master node 
+1+
+
+- Scheduler
+- API Server
+- Application controller
+- etcd
+
+*** Worker node 
+
+*** etcd
+key/value store
+
+** Controllers
+

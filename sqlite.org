@@ -1,0 +1,11 @@
+* show tables
+    .tables
+* describe table 
+  .schema <table_name>
+* some pretty printing
+.mode column
+.headers on
+
+
+
+

@@ -1,0 +1,24 @@
+* Iptables
+
+https://wiki.archlinux.org/index.php/iptables
+
+https://www.frozentux.net/iptables-tutorial/images/tables_traverse.jpg
+
+[[./img/tables_traverse.jpg]]
+
+
+
+root@vps101 ~ # iptables -L
+Chain INPUT (policy DROP)  # default policy -- 
+target     prot opt source               destination         
+
+
+
+
+* ufw
+
+https://wiki.archlinux.org/index.php/Uncomplicated_Firewall
+
+ufw status [verbose]
+
+

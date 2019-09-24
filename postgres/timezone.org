@@ -1,0 +1,8 @@
+http://blog.untrod.com/2016/08/actually-understanding-timezones-in-postgresql.html#footnote1
+
+
+postgres doesn't store timezones! 
+
+
+
+ 

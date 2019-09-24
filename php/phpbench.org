@@ -1,0 +1,1 @@
+./vendor/bin/phpbench run --report='extends: "aggregate", pretty_params: true'  benchmarks/FileUploadingBench.php --iterations 1 --revs 1 --output html

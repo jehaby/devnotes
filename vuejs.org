@@ -1,0 +1,15 @@
+* vuejs
+
+** vuex
+
+it's all about store
+
+*** Core concepts
+**** State
+**** Getters
+for getting some dinamic data from store
+**** Mutations
+for changing store's state
+**** Actions
+mutations with async
+

@@ -32,3 +32,9 @@ C-x SPC
 auto-fill-mode -- that's what I searched for so long
 C-x f -- set-fill-column
 M-q -- fill paragraph
+* remote files
+https://www.gnu.org/software/emacs/manual/html_node/emacs/Remote-Files.html
+
+/ssh:user@host:filename 
+* rectangle
+** string-insert-rectangle

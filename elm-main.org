@@ -1,0 +1,52 @@
+* Elm
+
+** Core language
+
+
+*** Values 
+*** Functions
+fun arg = arg + "somethings"
+
+**** Anonymous Function 
+
+\arg1 arg2 -> (arg1 + arg2) /2 
+
+
+All function are anonymous functions
+
+
+
+
+
+*** Lists
+Different number of values of same type 
+
+l = [34, 234, 455]
+
+l = ["grey", "blue"]
+
+
+*** Tuples
+Different number of values of different types
+
+t = (34, "Stas")
+
+*** Records
+
+Simular to objects 
+
+me = { name = "Stas", sex = False }
+
+me.name 
+
+.name me (interesting shit)
+
+
+** Types
+*** Type annotations 
+
+Line before function definition: 
+
+fun : number -> number
+fun a = a + 2 
+

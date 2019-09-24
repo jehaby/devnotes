@@ -1,0 +1,11 @@
+* Queries
+Executed in parallel
+
+* Mutaions 
+Executed sequentially
+
+* Frontend
+https://dev-blog.apollodata.com/the-concepts-of-graphql-bc68bd819be3
+** libs
+*** Apollo Client
+*** Relay

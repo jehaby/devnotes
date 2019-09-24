@@ -32,7 +32,9 @@ Gauges can be set, go up, and go down. They are useful for snapshots of state, s
 * Expression language
 ** Expression can evaluate to 
 *** Instant vector
+xiaomi_api_response_time_count{method="GET",path="/content/titleidlist",status="OK",xiaomi_status="0", instance="bmp-4:8088"}
 *** Range vector
+xiaomi_api_response_time_count{method="GET",path="/content/titleidlist",status="OK",xiaomi_status="0", instance="bmp-4:8088"}[50s]
 *** Scalar (single value)
 *** String (unused)
 
@@ -42,6 +44,12 @@ Gauges can be set, go up, and go down. They are useful for snapshots of state, s
 
 xiaomi_api_response_time_count{method="GET",path="/content/titleidlist",status="OK",xiaomi_status="0"}
 
+** irate vs rate 
+** https://www.robustperception.io/irate-graphs-are-better-graphs
+irate for grafana
+rate for alerting
+** https://utcc.utoronto.ca/~cks/space/blog/sysadmin/PrometheusRateVsIrate
+It doesn't make sense to give big interval to irate because it only uses last two data points
 * Links
 Prometheus как time series database / Тимур Нурутдинов (Lamoda)
 https://www.youtube.com/watch?v=5g6NAKzTKTs

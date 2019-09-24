@@ -1,0 +1,1 @@
+SELECT strftime('%Y-%m', datetime(timestamp/1000, 'unixepoch')) as month, count(word) FROM words group by month order by month;

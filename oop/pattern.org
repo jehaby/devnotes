@@ -1,0 +1,7 @@
+* Repository pattern
+
+Repository should manage only its own entities.
+
+Operations that change many entities should be in services.
+
+Think about divide Read and CUD (Create, Update, Delete) operations

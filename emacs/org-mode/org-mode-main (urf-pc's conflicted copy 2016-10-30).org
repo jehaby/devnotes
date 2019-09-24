@@ -1,0 +1,3 @@
+insert tag:  C-c C-c   (only on heading)
+
+search tag: C-c \ 
