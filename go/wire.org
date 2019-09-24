@@ -31,9 +31,9 @@ use ~wire.Struct(new(Smth), for injecting all fields)
 *** ProviderSet
 
 ** Resources
-Введение: https://blog.golang.org/wire 
-АПИ: https://godoc.org/github.com/google/wire
-Github: https://github.com/google/wire
-Tutorial: https://github.com/google/wire/tree/master/_tutorial
-Docs: https://github.com/google/wire/tree/master/docs
-Big sample application: https://github.com/google/go-cloud/tree/master/samples/guestbook
+- Введение: https://blog.golang.org/wire 
+- АПИ: https://godoc.org/github.com/google/wire
+- Github: https://github.com/google/wire
+- Tutorial: https://github.com/google/wire/tree/master/_tutorial
+- Docs: https://github.com/google/wire/tree/master/docs
+- Big sample application: https://github.com/google/go-cloud/tree/master/samples/guestbook
