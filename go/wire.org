@@ -23,12 +23,7 @@ Any non-injector declarations found in a file with injectors will be copied into
 
 ** API
 *** wire.Struct()
-have to use ~new(Smth)~, not ~&Smth{}~
-
-use ~wire.Struct(new(Smth), for injecting all fields)
-
-
-*** ProviderSet
+Have to use ~new(Smth)~, not ~&Smth{}~. Use ~wire.Struct(new(Smth), "*")~, for injecting all fields
 
 ** Resources
 - Введение: https://blog.golang.org/wire 
